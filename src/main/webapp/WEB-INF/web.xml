@@ -16,12 +16,7 @@
   	<description></description>
   	<servlet-class>com.abc.controller.Register</servlet-class>
   </servlet>
-  <servlet>
-  	<servlet-name>register</servlet-name>
-  	<display-name>register</display-name>
-  	<description></description>
-  	<servlet-class>com.abc.controller.register</servlet-class>
-  </servlet>
+  
   <servlet>
   	<servlet-name>CustomerReservationServlet</servlet-name>
   	<display-name>CustomerReservationServlet</display-name>
@@ -46,11 +41,25 @@
   	<description></description>
   	<servlet-class>com.abc.controller.OrderServlet</servlet-class>
   </servlet>
+  
+  
   <servlet>
-  	<servlet-name>LoginServlet</servlet-name>
-  	<display-name>LoginServlet</display-name>
+  	<servlet-name>ContactServlet</servlet-name>
+  	<display-name>ContactServlet</display-name>
   	<description></description>
-  	<servlet-class>com.abc.controller.LoginServlet</servlet-class>
+  	<servlet-class>com.abc.controller.ContactServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ContactUsServlet</servlet-name>
+  	<display-name>ContactUsServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.abc.controller.ContactUsServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>signupServlet</servlet-name>
+  	<display-name>signupServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.abc.controller.signupServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>SignupServlet</servlet-name>
@@ -58,18 +67,15 @@
   	<description></description>
   	<servlet-class>com.abc.controller.SignupServlet</servlet-class>
   </servlet>
-  <servlet-mapping>
-  	<servlet-name>RegisterServlet</servlet-name>
-  	<url-pattern>/RegisterServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>Register</servlet-name>
-  	<url-pattern>/Register</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>register</servlet-name>
-  	<url-pattern>/register</url-pattern>
-  </servlet-mapping>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<display-name>LoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.abc.controller.LoginServlet</servlet-class>
+  </servlet>
+  
+  
+ 
   <servlet-mapping>
   	<servlet-name>CustomerReservationServlet</servlet-name>
   	<url-pattern>/CustomerReservationServlet</url-pattern>
@@ -86,12 +92,20 @@
   	<servlet-name>OrderServlet</servlet-name>
   	<url-pattern>/OrderServlet</url-pattern>
   </servlet-mapping>
+    
   <servlet-mapping>
-  	<servlet-name>LoginServlet</servlet-name>
-  	<url-pattern>/LoginServlet</url-pattern>
+  	<servlet-name>ContactServlet</servlet-name>
+  	<url-pattern>/ContactServlet</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ContactUsServlet</servlet-name>
+  	<url-pattern>/ContactUsServlet</url-pattern>
+  </servlet-mapping>
+  
+ 
   <servlet-mapping>
   	<servlet-name>SignupServlet</servlet-name>
   	<url-pattern>/SignupServlet</url-pattern>
   </servlet-mapping>
+  
 </web-app>

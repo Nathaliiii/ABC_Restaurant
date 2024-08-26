@@ -80,7 +80,6 @@
     <div class="form-section">
         <h2>Book a Table</h2>
         <form action="reserve" method="post">
- <!-- Adjusted action to match servlet URL -->
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>

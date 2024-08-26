@@ -58,6 +58,10 @@
             background-color: darkgreen;
             color: white;
         }
+        .error-message {
+            color: red;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -81,19 +85,11 @@
 
                     <input type="submit" value="Login">
                 </form>
+                <div class="error-message">
+                    <%= request.getAttribute("errorMessage") != null ? request.getAttribute("errorMessage") : "" %>
+                </div>
             </div>
         </div>
     </div>
-
-    <script>
-        document.querySelector('form').addEventListener('submit', function(event) {
-            const role = document.getElementById('role').value;
-            if (role === 'admin') {
-                this.action = 'AdminDashboard.jsp';
-            } else if (role === 'staff') {
-                this.action = 'StaffDashboard.jsp';
-            }
-        });
-    </script>
 </body>
 </html>

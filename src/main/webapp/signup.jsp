@@ -104,6 +104,13 @@
             margin-top: 20px;
         }
 
+        .error-message {
+            color: #FF0000;
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 20px;
+        }
+
         .back-to-home {
             display: block;
             width: 100%;
@@ -136,7 +143,7 @@
         <div class="form-section">
             <div class="form-container">
                 <h2>Sign Up</h2>
-                <form class="signup-form" action="SignupServlet" method="post">
+                <form class="signup-form" action="signup" method="post">
                     <label for="name">Full Name:</label>
                     <input type="text" id="name" name="name" required>
 
@@ -144,7 +151,8 @@
                     <input type="email" id="email" name="email" required>
 
                     <label for="contact">Contact Number:</label>
-                    <input type="tel" id="contact" name="contact" required>
+                    <input type="tel" id="contact" name="contactnumber" required>
+
 
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
@@ -152,11 +160,14 @@
                     <input type="submit" value="Sign Up">
                 </form>
                 <% 
-                    // Check if there's a success message from the servlet
+                    // Check if there's a success or error message from the servlet
                     String successMessage = (String) request.getAttribute("successMessage");
+                    String errorMessage = (String) request.getAttribute("errorMessage");
                     if (successMessage != null) {
                 %>
                     <div class="success-message"><%= successMessage %></div>
+                <% } else if (errorMessage != null) { %>
+                    <div class="error-message"><%= errorMessage %></div>
                 <% } %>
                 <div class="back-to-home">
                     <a href="Home.jsp">Back to Home</a>

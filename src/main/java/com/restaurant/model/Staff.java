@@ -1,10 +1,10 @@
 package com.restaurant.model;
 
-public class Admin {
+public class Staff {
     private String username;
     private String password;
 
-    public Admin(String username, String password) {
+    public Staff(String username, String password) {
         this.username = username;
         this.password = password;
     }

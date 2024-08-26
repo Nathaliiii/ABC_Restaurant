@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/reserve")
-
 public class CustomerReservationServlet extends HttpServlet {
     private ReservationService reservationService;
 
@@ -34,6 +33,6 @@ public class CustomerReservationServlet extends HttpServlet {
             request.setAttribute("message", "Reservation failed. Please try again.");
         }
 
-        request.getRequestDispatcher("Reservation.jsp").forward(request, response); // Ensure reservation.jsp exists
+        request.getRequestDispatcher("Reservation.jsp").forward(request, response); // Ensure Reservation.jsp exists
     }
 }

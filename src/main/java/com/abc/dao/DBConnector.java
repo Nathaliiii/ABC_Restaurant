@@ -11,7 +11,6 @@ public class DBConnector {
 
     static {
         try {
-            // Load the MySQL JDBC driver
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -19,12 +18,10 @@ public class DBConnector {
         }
     }
 
-    // Method to get a connection to the database
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 
-    // Method to close the connection
     public static void closeConnection(Connection connection) {
         if (connection != null) {
             try {

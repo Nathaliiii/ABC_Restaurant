@@ -148,7 +148,8 @@
 
         <!-- Contact Form -->
         <div class="contact-info">
-            <form action="ContactServlet" method="post">
+            <form action="contactus" method="post"> <!-- Updated action URL -->
+
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -164,8 +165,12 @@
             <div class="message">
                 <% 
                     String status = request.getParameter("status");
-                    if (status != null && status.equals("success")) {
-                        out.println("Thank you! Your message has been sent.");
+                    if (status != null) {
+                        if (status.equals("success")) {
+                            out.println("<p style='color: green;'>Thank you! Your message has been sent.</p>");
+                        } else if (status.equals("failure")) {
+                            out.println("<p style='color: red;'>Sorry, there was an error sending your message. Please try again.</p>");
+                        }
                     }
                 %>
             </div>
