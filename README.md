@@ -15,9 +15,13 @@ Title: Added Payment Integration and UI Enhancements
 Description:
 
 Integrated payment processing for dine-in and delivery reservations.
+
 Improved the user interface with responsive design updates for better device compatibility.
+
 Enhanced validation mechanisms to ensure secure payment transactions and accurate data entry.
+
 Added reports for payment summaries and reservation statistics.
+
 Refined access control so staff can manage and view payments effectively.
 
 
