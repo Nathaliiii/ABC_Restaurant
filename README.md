@@ -7,4 +7,13 @@ Description:
 - Developed user-friendly interfaces and business flow representation.
 - Integrated MySQL database with validation mechanisms.
 - Added basic reports for business insights.
+  
 
+Title: Added Payment Integration and UI Enhancements
+
+Description:
+-Integrated payment processing for both dine-in and delivery reservations.
+-Improved the user interface with responsive design updates for better usability across devices.
+-Enhanced validation mechanisms for secure payment transactions and data input.
+-Added additional reports, including payment summaries and reservation statistics.
+-Refined access control to ensure staff can view and manage payments.
