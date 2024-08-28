@@ -11,6 +11,7 @@ public class ReservationService {
     }
 
     public boolean bookTable(String name, int numberOfPeople, String date, String time) {
+        // Use the constructor with the required fields
         Reservation reservation = new Reservation(name, numberOfPeople, date, time);
         return reservationDAO.addReservation(reservation);
     }

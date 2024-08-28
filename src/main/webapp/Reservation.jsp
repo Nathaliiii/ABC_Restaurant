@@ -104,7 +104,7 @@
                 <input type="time" id="time" name="time" required>
             </div>
             <button type="submit" class="submit-btn">Book Now</button>
-            <button type="button" class="back-home-btn" onclick="window.location.href='home.jsp'">Back to Home</button>
+            <button type="button" class="back-home-btn" onclick="window.location.href='Home.jsp'">Back to Home</button>
         </form>
 
         <% 

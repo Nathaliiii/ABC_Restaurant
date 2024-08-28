@@ -8,20 +8,32 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: url('images/background menu.jpg') no-repeat center center fixed; /* Adjust the path if necessary */
+            background: url('images/background menu.jpg') no-repeat center center fixed;
             background-size: cover;
             margin: 0;
             padding: 0;
         }
+        .search-bar {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .search-bar input {
+            width: 40%;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
         .header {
             display: flex;
-            justify-content: center; /* Center align the button horizontally */
+            justify-content: center;
             align-items: center;
             padding: 10px;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            background-color: rgba(255, 255, 255, 0.8);
             position: fixed;
             width: 100%;
-            bottom: 0; /* Position the header at the bottom */
+            bottom: 0;
             left: 0;
             z-index: 1000;
         }
@@ -40,9 +52,9 @@
         }
         .container {
             max-width: 1200px;
-            margin: 20px auto; /* Adjust margin to avoid overlap with header */
+            margin: 20px auto;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
         }
         h1 {
@@ -102,9 +114,19 @@
             font-size: 18px;
             color: #27ae60;
         }
+        .no-result {
+            text-align: center;
+            color: #777;
+            font-size: 18px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
+
+<div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for food..." onkeyup="searchMenu()">
+</div>
 
 <div class="container">
     <h1>Our Menu</h1>
@@ -116,6 +138,7 @@
         <button onclick="showMenu('desserts')">Desserts</button>
     </div>
 
+    <!-- Entrees Section -->
     <div id="entrees" class="menu-section active">
         <div class="menu-item">
             <div>
@@ -126,72 +149,88 @@
         </div>
         <div class="menu-item">
             <div>
-                <h3>Bruschetta Trio</h3>
-                <p>Tomato-basil, mushroom-garlic, and peach-balsamic on toasted ciabatta.</p>
+                <h3>Vegitable soup</h3>
+                <p>Soup with vegitables and corn</p>
             </div>
             <span>Rs.600.00</span>
         </div>
         <div class="menu-item">
             <div>
-                <h3>Pulled Pork Sliders</h3>
-                <p>Smoky pulled pork on mini brioche buns with apple slaw.</p>
+                <h3>Chicken soup</h3>
+                <p>Creamy chiken soup with vegitables and mint leaves..</p>
             </div>
-            <span>Rs.780.00</span>
+            <span>Rs.750.00</span>
         </div>
         <div class="menu-item">
             <div>
-                <h3>Garlic Parmesan Fries</h3>
-                <p>Hand-cut fries tossed with fresh garlic, parmesan, and parsley.</p>
-            </div>
-            <span>Rs.675.00</span>
-        </div>
-        <div class="menu-item">
-            <div>
-                <h3>Chili-Lime Prawn Skewers</h3>
-                <p>Grilled succulent prawns marinated in a zesty chili-lime sauce.</p>
-            </div>
-            <span>Rs.950.00</span>
-        </div>
-    </div>
-
-    <div id="mains" class="menu-section">
-        <div class="menu-item">
-            <div>
-                <h3>Grilled Chicken Breast</h3>
-                <p>Served with steamed vegetables and mashed potatoes.</p>
-            </div>
-            <span>Rs.900.00</span>
-        </div>
-        <div class="menu-item">
-            <div>
-                <h3>Beef Stroganoff</h3>
-                <p>Tender beef in a creamy mushroom sauce, served over egg noodles.</p>
-            </div>
-            <span>Rs.850.00</span>
-        </div>
-        <div class="menu-item">
-            <div>
-                <h3>Pan-Seared Salmon</h3>
-                <p>Salmon fillet with a lemon-dill sauce, served with quinoa and spinach.</p>
-            </div>
-            <span>Rs.800.00</span>
-        </div>
-        <div class="menu-item">
-            <div>
-                <h3>Vegetable Lasagna</h3>
-                <p>Layers of pasta, cheese, and mixed vegetables in a rich tomato sauce.</p>
+                <h3>Beef Soup</h3>
+                <p>Spicy beef soup with vegitables</p>
             </div>
             <span>Rs.700.00</span>
         </div>
         <div class="menu-item">
             <div>
-                <h3>BBQ Ribs</h3>
-                <p>Slow-cooked ribs with tangy BBQ sauce, served with coleslaw and fries.</p>
+                <h3>Stuffed Mushrooms</h3>
+                <p>Mushroom caps filled with cheese and garlic, baked to perfection.</p>
             </div>
-            <span>Rs.500.00</span>
+            <span>Rs.650.00</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Garlic Breadsticks</h3>
+                <p>Soft and warm breadsticks topped with garlic butter and herbs.</p>
+            </div>
+            <span>Rs.300.00</span>
         </div>
     </div>
 
+    <!-- Mains Section -->
+    <div id="mains" class="menu-section">
+        <div class="menu-item">
+            <div>
+                <h3>Rice and Curry</h3>
+                <p>Served with rice and 3 types of curries.</p>
+            </div>
+            <span>Rs.900.00</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Red Rice and curry</h3>
+                <p>Served with red rice and 4 types of curries.</p>
+            </div>
+            <span>Rs.1050.00</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Chiken Noodles</h3>
+                <p>Classic noodles with a rich meat sauce topped with parmesan.</p>
+            </div>
+            <span>Rs.850.00</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Classic Burger</h3>
+                <p>Burger served with  sauce and roasted potatoes.</p>
+            </div>
+            <span>Rs.1200.00</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Vegetarian Lasagna</h3>
+                <p>Layered pasta with vegetables, ricotta, and mozzarella.</p>
+            </div>
+            <span>Rs.800.00</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Butter Chicken</h3>
+                <p>Creamy tomato-based chicken curry served with steamed rice.</p>
+            </div>
+            <span>Rs.950.00</span>
+        </div>
+    </div>
+
+    <!-- Sides Section -->
     <div id="sides" class="menu-section">
         <div class="menu-item">
             <div>
@@ -202,93 +241,132 @@
         </div>
         <div class="menu-item">
             <div>
-                <h3>Garlic Bread</h3>
-                <p>Crispy toasted bread with a garlic butter spread.</p>
+                <h3>Garlic Mashed Potatoes</h3>
+                <p>Creamy mashed potatoes with roasted garlic and butter.</p>
             </div>
             <span>Rs.400.00</span>
         </div>
         <div class="menu-item">
             <div>
-                <h3>House Salad</h3>
-                <p>Mixed greens with cherry tomatoes, cucumbers, and a vinaigrette dressing.</p>
+                <h3>Grilled Asparagus</h3>
+                <p>Char-grilled asparagus with a squeeze of lemon.</p>
+            </div>
+            <span>Rs.350.00</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Vegitable Salad</h3>
+                <p>Classic vegitable salad with  parmesan cheese.</p>
             </div>
             <span>Rs.450.00</span>
         </div>
         <div class="menu-item">
             <div>
-                <h3>Onion Rings</h3>
-                <p>Golden fried onion rings served with a spicy dipping sauce.</p>
+                <h3>Steamed Broccoli</h3>
+                <p>Steamed broccoli tossed with olive oil and sea salt.</p>
             </div>
-            <span>Rs.450.00</span>
+            <span>Rs.300.00</span>
         </div>
         <div class="menu-item">
             <div>
-                <h3>Sweet Potato Fries</h3>
-                <p>Crispy sweet potato fries served with a honey mustard dip.</p>
+                <h3>mushroom with Vegetables</h3>
+                <p>Steamed seasonal vegetables with mushroom and olive oil.</p>
             </div>
-            <span>Rs.550.00</span>
+            <span>Rs.350.00</span>
         </div>
     </div>
 
+    <!-- Desserts Section -->
     <div id="desserts" class="menu-section">
         <div class="menu-item">
             <div>
                 <h3>Chocolate Lava Cake</h3>
-                <p>Warm chocolate cake with a gooey center, served with vanilla ice cream.</p>
+                <p>Rich chocolate cake with a molten center, served with vanilla ice cream.</p>
             </div>
             <span>Rs.600.00</span>
         </div>
         <div class="menu-item">
             <div>
-                <h3>Cheesecake</h3>
-                <p>Rich and creamy cheesecake with a graham cracker crust and strawberry sauce.</p>
-            </div>
-            <span>Rs.700.00</span>
-        </div>
-        <div class="menu-item">
-            <div>
-                <h3>Apple Pie</h3>
-                <p>Classic apple pie with a flaky crust, served with a scoop of cinnamon ice cream.</p>
-            </div>
-            <span>Rs.650.00</span>
-        </div>
-        <div class="menu-item">
-            <div>
-                <h3>Lemon Sorbet</h3>
-                <p>Refreshing lemon sorbet served with fresh mint leaves.</p>
+                <h3>Classic Cheesecake</h3>
+                <p>Creamy cheesecake with a graham cracker crust and berry topping.</p>
             </div>
             <span>Rs.550.00</span>
         </div>
         <div class="menu-item">
             <div>
                 <h3>Tiramisu</h3>
-                <p>Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.</p>
+                <p>Layers of espresso-soaked ladyfingers and mascarpone cream.</p>
             </div>
-            <span>Rs.800.00</span>
+            <span>Rs.650.00</span>
         </div>
+        <div class="menu-item">
+            <div>
+                <h3>Fruit Tart</h3>
+                <p>Buttery tart shell filled with custard and topped with fresh fruits.</p>
+            </div>
+            <span>Rs.500.00</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Brownie Sundae</h3>
+                <p>Fudgy brownie topped with ice cream, chocolate sauce, and nuts.</p>
+            </div>
+            <span>Rs.600.00</span>
+        </div>
+        <div class="menu-item">
+            <div>
+                <h3>Banoffee Pie</h3>
+                <p>Layered banana, toffee, and whipped cream on a biscuit base.</p>
+            </div>
+            <span>Rs.550.00</span>
+        </div>
+    </div>
+
+    <div id="noResult" class="no-result" style="display: none;">
+        No results found.
     </div>
 </div>
 
 <div class="header">
-    <a href="home.html">Home</a>
+    <a href="Home.jsp">Back to Home</a>
 </div>
 
 <script>
-    function showMenu(menuId) {
-        var sections = document.querySelectorAll('.menu-section');
-        sections.forEach(function(section) {
-            section.classList.remove('active');
-        });
+    function showMenu(section) {
+        var sections = document.getElementsByClassName('menu-section');
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].classList.remove('active');
+        }
+        document.getElementById(section).classList.add('active');
+        
+        var buttons = document.getElementsByTagName('button');
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove('active');
+        }
+        event.target.classList.add('active');
+    }
 
-        var buttons = document.querySelectorAll('.menu-tabs button');
-        buttons.forEach(function(button) {
-            button.classList.remove('active');
-        });
+    function searchMenu() {
+        var input = document.getElementById('searchInput');
+        var filter = input.value.toLowerCase();
+        var menuItems = document.getElementsByClassName('menu-item');
+        var noResult = document.getElementById('noResult');
+        var visibleItems = 0;
 
-        document.getElementById(menuId).classList.add('active');
-        var activeButton = Array.from(buttons).find(button => button.textContent.toLowerCase() === menuId);
-        if (activeButton) {
-            activeButton.classList.add('active');
+        for (var i = 0; i < menuItems.length; i++) {
+            var itemText = menuItems[i].textContent || menuItems[i].innerText;
+            if (itemText.toLowerCase().indexOf(filter) > -1) {
+                menuItems[i].style.display = "";
+                visibleItems++;
+            } else {
+                menuItems[i].style.display = "none";
+            }
+        }
+
+        if (visibleItems === 0) {
+            noResult.style.display = "block";
+        } else {
+            noResult.style.display = "none";
         }
     }
 </script>

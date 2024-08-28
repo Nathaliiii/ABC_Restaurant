@@ -1,111 +1,76 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+        http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+    version="3.1">
+	<servlet>
+		<description>
+		</description>
+		<display-name>UserListServlet</display-name>
+		<servlet-name>UserListServlet</servlet-name>
+		<servlet-class>com.abc.controller.UserListServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>AddUserServlet</display-name>
+		<servlet-name>AddUserServlet</servlet-name>
+		<servlet-class>com.abc.controller.AddUserServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>DeleteUserServlet</display-name>
+		<servlet-name>DeleteUserServlet</servlet-name>
+		<servlet-class>com.abc.controller.DeleteUserServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ManageUsersServlet</display-name>
+		<servlet-name>ManageUsersServlet</servlet-name>
+		<servlet-class>com.abc.controller.ManageUsersServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>EditUserServlet</display-name>
+		<servlet-name>EditUserServlet</servlet-name>
+		<servlet-class>com.abc.controller.EditUserServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>UpdateUserServlet</display-name>
+		<servlet-name>UpdateUserServlet</servlet-name>
+		<servlet-class>com.abc.controller.UpdateUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserListServlet</servlet-name>
+		<url-pattern>/UserListServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddUserServlet</servlet-name>
+		<url-pattern>/AddUserServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteUserServlet</servlet-name>
+		<url-pattern>/DeleteUserServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ManageUsersServlet</servlet-name>
+		<url-pattern>/ManageUsersServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EditUserServlet</servlet-name>
+		<url-pattern>/EditUserServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateUserServlet</servlet-name>
+		<url-pattern>/UpdateUserServlet</url-pattern>
+	</servlet-mapping>
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-  	<servlet-name>RegisterServlet</servlet-name>
-  	<display-name>RegisterServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.restaurant.controller.RegisterServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>Register</servlet-name>
-  	<display-name>Register</display-name>
-  	<description></description>
-  	<servlet-class>com.abc.controller.Register</servlet-class>
-  </servlet>
-  
-  <servlet>
-  	<servlet-name>CustomerReservationServlet</servlet-name>
-  	<display-name>CustomerReservationServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.abc.controller.CustomerReservationServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>ReservationServlet</servlet-name>
-  	<display-name>ReservationServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.abc.controller.ReservationServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>CustomerReservationServelet</servlet-name>
-  	<display-name>CustomerReservationServelet</display-name>
-  	<description></description>
-  	<servlet-class>com.abc.controller.CustomerReservationServelet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>OrderServlet</servlet-name>
-  	<display-name>OrderServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.abc.controller.OrderServlet</servlet-class>
-  </servlet>
-  
-  
-  <servlet>
-  	<servlet-name>ContactServlet</servlet-name>
-  	<display-name>ContactServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.abc.controller.ContactServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>ContactUsServlet</servlet-name>
-  	<display-name>ContactUsServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.abc.controller.ContactUsServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>signupServlet</servlet-name>
-  	<display-name>signupServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.abc.controller.signupServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>SignupServlet</servlet-name>
-  	<display-name>SignupServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.abc.controller.SignupServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>LoginServlet</servlet-name>
-  	<display-name>LoginServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.abc.controller.LoginServlet</servlet-class>
-  </servlet>
-  
-  
- 
-  <servlet-mapping>
-  	<servlet-name>CustomerReservationServlet</servlet-name>
-  	<url-pattern>/CustomerReservationServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>ReservationServlet</servlet-name>
-  	<url-pattern>/ReservationServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>CustomerReservationServelet</servlet-name>
-  	<url-pattern>/CustomerReservationServelet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>OrderServlet</servlet-name>
-  	<url-pattern>/OrderServlet</url-pattern>
-  </servlet-mapping>
     
-  <servlet-mapping>
-  	<servlet-name>ContactServlet</servlet-name>
-  	<url-pattern>/ContactServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>ContactUsServlet</servlet-name>
-  	<url-pattern>/ContactUsServlet</url-pattern>
-  </servlet-mapping>
-  
- 
-  <servlet-mapping>
-  	<servlet-name>SignupServlet</servlet-name>
-  	<url-pattern>/SignupServlet</url-pattern>
-  </servlet-mapping>
-  
+
 </web-app>

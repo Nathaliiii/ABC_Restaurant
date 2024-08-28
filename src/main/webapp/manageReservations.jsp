@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page import="java.util.List" %>
+<%@ page import="com.restaurant.model.Reservation" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +55,7 @@
         .button {
             display: inline-block;
             padding: 10px 20px;
-            margin: 10px;
+            margin: 5px;
             text-decoration: none;
             color: #fff;
             background-color: #006400; /* Dark Green */
@@ -87,43 +89,52 @@
 <div class="container">
     <h1>Manage Reservations</h1>
     
-    <!-- Sample Table for Reservations -->
+    <!-- Reservations Table -->
     <table class="reservation-table">
         <thead>
             <tr>
                 <th>Reservation ID</th>
                 <th>Customer Name</th>
-                <th>Table Number</th>
+                <th>Number of People</th>
                 <th>Date</th>
+                <th>Time</th> <!-- Added Time Column -->
                 <th>Status</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
+            <%-- Dynamically populated reservation data --%>
+            <%
+                List<Reservation> reservations = (List<Reservation>) request.getAttribute("reservations");
+                if (reservations != null) {
+                    for (Reservation reservation : reservations) {
+            %>
             <tr>
-                <td>001</td>
-                <td>John Doe</td>
-                <td>5</td>
-                <td>2024-08-25</td>
-                <td>Confirmed</td>
+                <td><%= reservation.getId() %></td>
+                <td><%= reservation.getName() %></td>
+                <td><%= reservation.getNumberOfPeople() %></td>
+                <td><%= reservation.getDate() %></td>
+                <td><%= reservation.getTime() %></td> <!-- Display Time -->
+                <td><%= reservation.getStatus() %></td>
+                <td>
+                    <a href="editReservation.jsp?id=<%= reservation.getId() %>" class="button">Edit</a>
+                    <form action="deleteReservation" method="post" style="display:inline;">
+                        <input type="hidden" name="reservationId" value="<%= reservation.getId() %>">
+                        <button type="submit" class="button">Delete</button>
+                    </form>
+                </td>
             </tr>
-            <tr>
-                <td>002</td>
-                <td>Jane Smith</td>
-                <td>7</td>
-                <td>2024-08-26</td>
-                <td>Pending</td>
-            </tr>
-            <!-- Add more rows as needed -->
+            <%      }
+                }
+            %>
         </tbody>
     </table>
 
-    <!-- Buttons for Edit, Delete, Update, and Staff Dashboard -->
+    <!-- Buttons for other actions -->
     <div class="button-group">
-    <a href="editReservation.jsp" class="button">Edit</a>
-    <a href="deleteReservation.jsp" class="button">Delete</a>
-    <a href="updateReservation.jsp" class="button">Update</a>
-    <a href="StaffDashboard.jsp" class="button">Staff Dashboard</a> 
-</div>
+        <a href="addCustomer.jsp" class="button">Add Customer</a>
+        <a href="StaffDashboard.jsp" class="button">Staff Dashboard</a>
+    </div>
 
 </div>
 

@@ -27,6 +27,22 @@
             text-align: center;
         }
 
+        header .menu {
+            margin-bottom: 10px;
+        }
+
+        header .menu a {
+            color: #000000;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 8px;
+            display: inline-block;
+        }
+
+        header .menu a:hover {
+            background-color: #FFD700;
+        }
+
         header nav {
             margin-top: 10px;
         }
@@ -124,12 +140,14 @@
 <body>
 
     <header>
+        
         <h1>ABC Restaurant</h1>
         <nav>
             <a href="signup.jsp">Sign Up</a>
             <a href="login.jsp">Login</a>
-            <a href="Services.jsp">Services</a>
-            <a href="Reservation.jsp">Reservations</a>
+            <a href="Services.jsp">Services</a>           
+            <a href="Menu.jsp">Menu</a>        
+            <a href="facilities.jsp">Facilities</a>
             <a href="Contactus.jsp">Contact Us</a>
         </nav>
     </header>

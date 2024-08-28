@@ -1,14 +1,21 @@
 package com.restaurant.model;
 
-public class Admin {
+public class AdminStafflog {
     private String username;
     private String password;
 
-    public Admin(String username, String password) {
+    // Default constructor
+    public AdminStafflog() {
+        // Default constructor
+    }
+
+    // Parameterized constructor (optional)
+    public AdminStafflog(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
+    // Getters and setters
     public String getUsername() {
         return username;
     }

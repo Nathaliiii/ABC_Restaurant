@@ -24,10 +24,12 @@ public class SignupServlet extends HttpServlet {
         boolean result = userDAO.saveUser(name, email, contactNumber, password);
 
         if (result) {
-            request.setAttribute("successMessage", "Registration successful!");
+            // Redirect to reservation.jsp with a success message in the query string
+            response.sendRedirect("Reservation.jsp?successMessage=Registration%20successful!%20You%20can%20now%20make%20a%20reservation.");
         } else {
+            // Set error message and forward back to signup.jsp
             request.setAttribute("errorMessage", "Registration failed. Please try again.");
+            request.getRequestDispatcher("signup.jsp").forward(request, response);
         }
-        request.getRequestDispatcher("signup.jsp").forward(request, response);
     }
 }
