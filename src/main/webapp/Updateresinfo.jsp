@@ -3,113 +3,138 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Update Restaurant Information</title>
+    <title>ABC Restaurant Add Information</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #001f3f; /* Dark blue background */
             margin: 0;
             padding: 0;
         }
-
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .date, .navbar .restaurant, .navbar .welcome {
+            margin: 0 15px;
+        }
         .container {
             width: 80%;
-            margin: 0 auto;
+            margin: 20px auto;
+            background-color: #add8e6; /* Light blue background for form */
             padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         h1 {
-            color: #0066cc; /* Dark Blue */
             text-align: center;
+            color: #fff; /* White text for header */
         }
-
-        form {
+        .form-section {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
-
+        .form-section > div {
+            width: 48%;
+            margin-bottom: 15px;
+        }
         label {
-            margin-top: 10px;
-            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
         }
-
-        input[type="text"], input[type="email"], textarea {
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+        input[type="text"], textarea {
             width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
-
         textarea {
             resize: vertical;
-            height: 150px;
+            height: 80px;
         }
-
-        button {
-            margin-top: 20px;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            background-color: #0066cc; /* Dark Blue */
+        .submit-button {
+            text-align: center;
+        }
+        .submit-button button {
+            background-color: #4CAF50;
             color: white;
-            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
         }
-
-        button:hover {
-            background-color: #005bb5; /* Darker Blue */
-        }
-
-        .back-link {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .back-link a {
-            text-decoration: none;
-            color: #ffffff;
-            background-color: #0066cc;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .back-link a:hover {
-            background-color: #005bb5;
+        .submit-button button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
 
+<header>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <span class="date">25th August 2024</span>
+        </div>
+        <div class="navbar-center">
+            <span class="restaurant">ABC Restaurant</span>
+        </div>
+        <div class="navbar-right">
+            <span class="notification-icon">📧</span>
+            <span class="bell-icon">🔔</span>
+            <span class="welcome">Welcome</span>
+        </div>
+    </nav>
+</header>
+
 <div class="container">
-    <h1>Update Restaurant Information</h1>
-    <form action="UpdateRestaurantServlet" method="post">
-        <label for="restaurantName">Restaurant Name:</label>
-        <input type="text" id="restaurantName" name="restaurantName" required>
+    <h1>ABC Restaurant Add Information</h1>
 
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required>
+    <!-- Update form action to point to AddRestaurantServlet -->
+    <form action="AddRestaurantServlet" method="post">
+        <div class="form-section">
+            <div>
+                <label>Email Address:</label>
+                <input type="text" name="email" placeholder="Enter email address" />
+            </div>
 
-        <label for="contactEmail">Contact Email:</label>
-        <input type="email" id="contactEmail" name="contactEmail" required>
+            <div>
+                <label>Website Link:</label>
+                <input type="text" name="websiteLink" placeholder="Enter website link" />
+            </div>
 
-        <label for="phoneNumber">Phone Number:</label>
-        <input type="text" id="phoneNumber" name="phoneNumber" required>
+            <div>
+                <label>Operating Hours:</label>
+                <input type="text" name="operatingHours" placeholder="Enter operating hours" />
+            </div>
 
-        <label for="description">Description:</label>
-        <textarea id="description" name="description" required></textarea>
+            <div>
+                <label>Seating Capacity:</label>
+                <input type="text" name="seatingCapacity" placeholder="Enter seating capacity" />
+            </div>
 
-        <button type="submit">Update Information</button>
+            <div>
+                <label>Delivery Partners:</label>
+                <input type="text" name="deliveryPartners" placeholder="Enter delivery partners" />
+            </div>
+
+            <div>
+                <label>Restaurant Description:</label>
+                <textarea name="restaurantDescription" placeholder="Enter restaurant description"></textarea>
+            </div>
+        </div>
+
+        <div class="submit-button">
+            <!-- Update button text to "Add Restaurant Info" -->
+            <button type="submit">Add Restaurant Info</button>
+        </div>
     </form>
-
-    <div class="back-link">
-        <a href="AdminDashboard.jsp">Back to Dashboard</a>
-    </div>
 </div>
 
 </body>
