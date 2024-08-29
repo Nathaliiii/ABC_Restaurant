@@ -14,17 +14,21 @@ Title: Added Payment Integration and UI Enhancements
 
 Description:
 
-Integrated payment processing for dine-in and delivery reservations.
+-Integrated payment processing for dine-in and delivery reservations.
 
-Improved the user interface with responsive design updates for better device compatibility.
+-Improved the user interface with responsive design updates for better device compatibility.
 
-Enhanced validation mechanisms to ensure secure payment transactions and accurate data entry.
+-Enhanced validation mechanisms to ensure secure payment transactions and accurate data entry.
 
-Added reports for payment summaries and reservation statistics.
+-Added reports for payment summaries and reservation statistics.
 
-Refined access control so staff can manage and view payments effectively.
+-Refined access control so staff can manage and view payments effectively.
 
 
+feat(admin-panel): recreate manage users, generate reports, and update restaurant information JSP files
+
+- Recreated JSP files for managing users, generating reports, and updating restaurant information.
+- Updated corresponding package functions to integrate with new JSP files.
 
 
 
