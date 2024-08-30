@@ -61,50 +61,65 @@
             outline: none;
         }
 
-        button,
-        a.button {
+        button {
             padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
             border: none;
             border-radius: 4px;
             font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s;
             margin-top: 20px;
-            display: inline-block;
-            text-align: center;
-            text-decoration: none;
-        }
-
-        button {
-            background-color: #3498db;
-            color: #fff;
-            border: none;
+            transition: background-color 0.3s;
         }
 
         button:hover {
             background-color: #2980b9;
         }
 
-        a.button {
-            border: 2px solid #3498db;
-            background-color: #fff;
-            color: #3498db;
-        }
-
-        a.button:hover {
-            background-color: #3498db;
-            color: #fff;
-        }
-
         .centered {
             text-align: center;
             margin-top: 20px;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Add Customer</h1>
+
+        <!-- Display Success or Error Message -->
+        <%
+            String successMessage = (String) request.getAttribute("successMessage");
+            String errorMessage = (String) request.getAttribute("errorMessage");
+
+            if (successMessage != null) {
+        %>
+            <div class="message success"><%= successMessage %></div>
+        <%
+            } else if (errorMessage != null) {
+        %>
+            <div class="message error"><%= errorMessage %></div>
+        <%
+            }
+        %>
 
         <form action="addCustomerServlet" method="post">
             <label for="name">Customer Name:</label>
@@ -120,7 +135,7 @@
         </form>
 
         <div class="centered">
-            <a href="manageReservations.jsp" class="button">manage Reservations</a>
+            <a href="manageReservations.jsp" class="button">Manage Reservations</a>
         </div>
     </div>
 </body>
