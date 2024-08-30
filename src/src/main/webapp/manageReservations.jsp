@@ -101,33 +101,6 @@
                 <th>Status</th>
                 <th>Actions</th>
             </tr>
-            <tr>
-                <td>101</td>
-                <td>Poornima Weerasekara </td>
-                <td>8</td>
-                <td>24/08/2024</td>
-                 <td>08:00 am</td>
-                  <td>Confirmed</td>
-                   <td>cash</td>
-            </tr>
-            <tr>
-                <td>102</td>
-                <td>Sonal Perera</td>
-                <td>2</td>
-                <td>19/08/2024</td>
-                 <td>09:00 pm</td>
-                  <td>pending</td>
-                   <td>cash</td>
-            </tr>
-            <tr>
-                <td>103</td>
-                <td>Waruni Silva</td>
-                <td>5</td>
-                <td>10/09/2024</td>
-                 <td>05:00 pm</td>
-                  <td>pending</td>
-                   <td>online payment</td>
-            </tr>
         </thead>
         <tbody>
             <%-- Dynamically populated reservation data --%>

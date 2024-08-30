@@ -96,34 +96,18 @@
         <tbody>
             <tr>
                 <td>001</td>
-                <td>Emily Perera</td>
+                <td>Emily Clark</td>
                 <td>Special menu request</td>
                 <td>Pending</td>
-                <td><a href="query.jsp?id=001" class="button">Respond</a></td>
+                <td><a href="respondQuery.jsp?id=001" class="button">Respond</a></td>
             </tr>
             <tr>
                 <td>002</td>
-                <td>Michael De Silva</td>
+                <td>Michael Brown</td>
                 <td>Table arrangement issue</td>
                 <td>In Progress</td>
-                <td><a href="query.jsp?id=002" class="button">Respond</a></td>
-            </tr><tr>
-            
-                <td>003</td>
-                <td>Apsara Silva</td>
-                <td>About Outdoor Event Facilities</td>
-                <td>Pending</td>
-                <td><a href="query.jsp?id=001" class="button">Respond</a></td>
-               </tr><tr>
-                
-                <td>004</td>
-                <td>Dewni Peter</td>
-                <td>Indoor Event management details</td>
-                <td>In progress</td>
-                <td><a href="query.jsp?id=001" class="button">Respond</a></td>
+                <td><a href="respondQuery.jsp?id=002" class="button">Respond</a></td>
             </tr>
-            
-            
             <!-- Add more rows as needed -->
         </tbody>
     </table>
