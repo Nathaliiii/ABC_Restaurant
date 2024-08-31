@@ -32,4 +32,19 @@ feat(admin-panel): recreate manage users, generate reports, and update restauran
 
 
 
+feat: Created packages for customer functionalities - table booking,
+queries, and menu search
+
+- Added `com.abc.controller.CustomerReservationServlet` for handling
+customer table bookings.
+- Created `com.abc.dao.CustomerDAO` for database interactions related to
+customer reservations.
+- Added `com.abc.service.CustomerService` to manage business logic for
+customer actions.
+- Created `com.abc.controller.CustomerQueryServlet` for handling
+customer queries submission.
+- Added `com.abc.controller.MenuSearchServlet` for customer menu search
+functionality.
+- Updated the necessary JSP files to integrate these features.
+ master
 
